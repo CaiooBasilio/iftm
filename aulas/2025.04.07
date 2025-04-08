@@ -1,0 +1,20 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página contendo tags HTML para formatação de texto">
+    <meta name="keywords" content="HTML, tags HTML, página web">
+    <meta name="author" content="Caio Henrique Martins Basilio">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Formatação de página web</title>
+</head>
+<body style="background-color:black;">
+    <p style="color:rgb(124, 79,238); background-color:white"><b><span style="color:brown; font-size:55px;">L</span>ipsum</b>, <i>dolor sit</i> <u>amet consectetur</u> <strong>elit. Doloremque</strong> 
+    quidem aperiam odio blanditiis repellat totam, ipsum placeat, dolore vitae consequuntur deserunt eligendi quas id nemo officia. Ullam nesciunt cupiditate quidem?</p>
+
+    <!-- O strong serve para representar uma palavra importante dentro do texto; Span é uma tag neutra que serve para especificar sem alterar tudo.
+    color= cor das letras; background-color= cor do fundo. O style muda tudo. para mudar a fonte usa font-family-->
+
+    <p style="color:darkgreen"><b><i><u>Lorem</u></i></b> ipsum dolor sit amet consectetur adipisicing elit. Et doloremque, dignissimos impedit beatae aliquid, 
+    explicabo nemo asperiores voluptate ad reprehenderit voluptatibus soluta assumenda atque tempore! Molestiae laudantium id nostrum officiis!</p>
+</body>
+</html>
