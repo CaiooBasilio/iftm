@@ -12,7 +12,8 @@
     quidem aperiam odio blanditiis repellat totam, ipsum placeat, dolore vitae consequuntur deserunt eligendi quas id nemo officia. Ullam nesciunt cupiditate quidem?</p>
 
     <!-- O strong serve para representar uma palavra importante dentro do texto; Span é uma tag neutra que serve para especificar sem alterar tudo.
-    color= cor das letras; background-color= cor do fundo. O style muda tudo. para mudar a fonte usa font-family-->
+    color= cor das letras; background-color= cor do fundo. O style muda tudo. para mudar a fonte usa font-family, para ajustar o texto usa-se text-align
+    para tipo cortar uma palavra usa <s></s>-->
 
     <p style="color:darkgreen"><b><i><u>Lorem</u></i></b> ipsum dolor sit amet consectetur adipisicing elit. Et doloremque, dignissimos impedit beatae aliquid, 
     explicabo nemo asperiores voluptate ad reprehenderit voluptatibus soluta assumenda atque tempore! Molestiae laudantium id nostrum officiis!</p>
