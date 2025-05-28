@@ -45,13 +45,13 @@ header nav a:link, header nav a:visited{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background-image: url('../imagens/logos_gray_transparent_70x70.png');
+    background-image: url('../img/logos_gray_transparent_70x70.png');
     background-repeat: no-repeat;
     background-position: center -15px;
 }
 header nav a:hover{
     color: yellow;
-    background-image: url('../imagens/logos_resized_70x70.png');
+    background-image: url('../img/logos_resized_70x70.png');
 }
  /* Menu: Inicio */
 /* header nav ul {
