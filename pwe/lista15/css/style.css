@@ -1,0 +1,105 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} 
+a coisa mais importante em todo site*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "Inter", sans-serif;
+    background-color: black;
+}
+header h1, header p{
+    text-align: right;
+    padding: 15px;
+
+}
+header h1{
+    font-family: "Oswald", sans-serif;
+    background-color: black;
+    color: white;
+}
+header p{
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+}
+header nav ul {
+    background-color: rgb(104, 104, 195);
+    list-style: none;
+    text-align: center;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 0px 15px;
+}
+header nav a:link, header nav a:visited{
+    display: inline-block;
+    padding: 40px 10px 10px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-image: url('../imagens/logos_gray_transparent_70x70.png');
+    background-repeat: no-repeat;
+    background-position: center -15px;
+}
+header nav a:hover{
+    color: yellow;
+    background-image: url('../imagens/logos_resized_70x70.png');
+}
+ /* Menu: Inicio */
+/* header nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: rgb(104, 104, 195);
+}
+header nav ul li {
+       display: inline-block;
+}
+header nav a:link, header nav a:visited {
+    display: inline-block;
+    padding:20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+} 
+header nav a:hover {
+    color: yellow;
+} */
+/* Menu:Fim */
+section{
+    background-color: white;
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+section a:link,section a:visited{
+    text-decoration: underline;
+    color: blue;
+}
+section h2{
+    transition: all 0.5s;
+}
+section h2:hover{
+    letter-spacing: 10px;
+}
+section ul{
+    padding:25px 55px;
+}
+section img{
+    display: block;
+    width: 550px;
+    margin: auto;
+}
+section p{
+    padding: 15px; 
+    line-height: 25px;
+    font-size: 20px;
+    letter-spacing: 3.30;
+}
