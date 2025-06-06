@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin:0px;
+}
+body{
+    background-color: black;
+}
+section{
+    width: 1200px;
+    margin: auto;
+    background-color: white;
+}
+.principal{
+    text-align: center;
+}
+.principal> h1{
+    color:red;
+    margin: 8px;
+    padding: 5px;
+    font-size: 35px;
+}
+.principal p{
+    font-size: 18px;
+}
+summary, summary:hover{
+    color: blue;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container>div{
+    width: 20%;
+    margin: 15px;
+    text-align: justify;
+}
+.container>div>p{
+    margin-bottom: 10px;
+}
