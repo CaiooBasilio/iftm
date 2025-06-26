@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(43, 42, 42);
+}
+header{
+    background-color: black;
+    color: white;
+    margin: auto;
+}
+header>.container{
+    display: flex;
+}
+header>.container>.text{
+    padding: 20px 10px 10px 25px;
+    display: flex;
+    flex-direction: column;
+
+}
+header>.container>.top{
+    display: flex;
+    margin-left: auto;
+    padding: 10px 25px;
+    
+}
+header>.container>.top>img{
+    width: 75px;
+}
+header>nav{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header li{
+    padding: 20px;
+    margin: 0px 5px;
+}
+header li:hover{
+    border-top: 1px solid red;
+    border-bottom: 1px solid yellow;
+}
+
+/* Main */
+
+section{
+    background-color: white;
+    margin: auto;
+    width: 1200px;
+    margin-bottom: 10px;
+}
+
+.container01{
+    display: flex;
+    align-items: center;
+}
+.container01>div:nth-of-type(1){
+    padding: 25px;
+}
+.container01>div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+
+}
+.container01>div:nth-of-type(2)>.manu{
+    margin: 10px 0px;
+    color: red;
+}
+.container02{
+    display: flex;
+    align-items: center;
+}
+
+.container02>.cel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+}
+.container02 h2, .container img{
+    color: blue;
+    padding: 20px;
+}
+.container02 p{
+    text-align: justify;
+    line-height: 22px;
+}
+
+.ultima{
+    display: flex;
+    background-color: rgb(200, 200, 200);
+    margin-top: 10px;
+    padding: 20px;
+}
+.ultima div {
+    width: 50%;
+    padding-left: 50px;
+}
+.ultima ul {
+    margin-left: 35px;
+}
+.ultima li{
+    margin: 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
