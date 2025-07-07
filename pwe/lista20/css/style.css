@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    line-height: 130%;
+}
+/* HEADER MOBILE */
+header nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+header nav a:link, header nav a:visited{
+    text-decoration: none;
+    display: block;/* serve para o elemento cupar 100% da largura da tela*/
+    text-align: center;
+    color: rgb(29, 29, 29);
+    padding: 10px;
+}
+header nav a:hover{
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+
+/* MAIN */
+section:nth-of-type(odd){
+    background-color: rgb(29, 29, 29);
+    color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 30px;
+}
+section p{
+    padding: 30px 0px;
+}
+section img{
+    max-width: 100%;
+    height: auto;
+}
+section{
+    padding: 30px;
+}
+input[type="button"]{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+input[type="button"]:hover{
+    background-color: rgb(5, 5, 153);
+    cursor: pointer;
+}
+
+.section_planos>div>div{
+    text-align: center;
+    padding: 15px 0px;
+    /* border: 1px solid black; */
+}
+.section_planos>div>div p{
+    text-align: justify;
+}
+.section_planos>div>div h2{
+    color:red;
+    font-size: 18px;
+    margin: 5px 0px 10px;
+}
+.section_planos>div{
+    display: flex;
+    flex-direction: column;
+}
+.aplicativo>div p{
+    text-align: justify;
+    padding: 20px;
+    line-height: 140%;
+}
+
+
+.section_produtos>div{
+    display:flex;
+    flex-direction: column;
+}
+.section_produtos>div>div{
+    text-align: center;
+    padding: 10px 0px;
+}
+.section_produtos>div>div p{
+    text-align: justify;
+}
+.section_produtos input[type="button"]{
+    margin: 0px;
+}
+
+.minha>div>div{
+    display: flex;
+    flex-direction: column;
+}
+.minha h1{
+    margin-top: 10px;
+    color: goldenrod;
+}
+
+footer{
+    padding: 50px;
+    background-color: black;
+}
+footer p{
+    color: white;
+    text-align: center;
+}
+
+figcaption{
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+/* DESKTOP */
+@media screen and (min-width:756px) {
+    /* HEADER */
+    header nav ul{
+        flex-direction: row;
+        justify-content: end;
+    }
+    header nav a:link, header nav a:visited{
+        padding: 15px 25px;
+    }
+
+    /* MAIN */
+    section > div{
+        width: 1200px;
+        margin: auto;
+    }
+    .section_planos>div{
+        flex-direction: row;
+        /* border: 1px solid green; */
+        width: 1200px;
+        margin: auto;
+    }
+    .section_planos>div>div{
+        padding: 0px 20px;
+    }
+    .section_produtos>div{
+        flex-direction: row;
+    }
+    .section_produtos>div>div{
+        padding: 0px 30px;
+    }
+    figcaption{
+        font-size: 24px;
+    }
+    .minha> div >div{
+        flex-direction: row;
+    }
+    .minha> div >div div{
+        padding: 20px;
+    }
+}
