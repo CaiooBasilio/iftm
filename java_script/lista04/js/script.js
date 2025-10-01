@@ -4,10 +4,10 @@ btnGera.addEventListener("click",geraCandi)
 
 function geraCandi(){
     candidatos=[
-        {nome:"Simone Tebet", partido:"MDB", img:"Candidato4.png"},
-        {nome:"Jair Bolsonaro", partido:"PL", img:"Candidato1.png"},
-        {nome:"Ciro Gomes", partido:"PDT", img:"Candidato3.png"},
-        {nome:"Lula", partido:"PT", img:"Candidato2.png"}
+        {nome:"Simone Tebet", partido:"MDB", img:"candidato4.png"},
+        {nome:"Jair Bolsonaro", partido:"PL", img:"candidato1.png"},
+        {nome:"Ciro Gomes", partido:"PDT", img:"candidato3.png"},
+        {nome:"Lula", partido:"PT", img:"candidato2.png"}
     ];
 
     indices = [0,1,2,3];
@@ -45,4 +45,5 @@ function geraCandi(){
     // document.getElementById("partidoCandi2").innerHTML = candidatos[sorteo2].partido;
     // document.getElementById("imagemCandi2").src = `img/${candidatos[sorteo2].img}`;
 }
+
 geraCandi();
