@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#imgTama[src="img/ex01/Nervoso.png"] {
+    animation: shake 0.4s infinite;
+}
+#imgTama[src="img/ex01/Alegre.png"]{
+    animation: lados 1.3s infinite;
+}
+@keyframes shake {
+    0%{ 
+        transform: translate(0,0); 
+    }
+    25%  { 
+        transform: translate(-2px, 1px); 
+    }
+    50%  { 
+        transform: translate(2px, -1px); 
+    }
+    75%  { 
+        transform: translate(-2px, -1px);
+    }
+    100% { 
+        transform: translate(0,0); 
+    }
+}
+@keyframes lados {
+    0%{ 
+        transform: translatex(0); 
+    }
+    25%  { 
+        transform: translatex(10px); 
+    }
+    50%  { 
+        transform: translatex(5px); 
+    }
+    75%  { 
+        transform: translatex(-10px);
+    }
+    100% { 
+        transform: translatex(0); 
+    }
+}

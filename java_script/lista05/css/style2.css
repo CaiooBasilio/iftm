@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.candi{
+    display: flex;
+    justify-content: center;
+}
+.candi h1{
+    margin: 20px 40px;
+    color: red;
+}
+.contas{
+    display: flex;
+    justify-content: center;
+}
+.contas> div:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+}
+.contas div{
+    margin: 5px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: rgb(195, 215, 156);
+}
+p{
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+}
+h2{
+    margin-bottom: 10px;
+}
