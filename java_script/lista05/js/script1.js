@@ -4,7 +4,7 @@ window.onload = pensa();
 personagem.addEventListener("mouseout", pensa);
 
 function pensa(){
-    document.getElementById("imgTama").src = "img/ex01/pensativo.png";
+    document.getElementById("imgTama").src = "img/ex01/Pensativo.png";
     document.getElementById("fala").innerHTML= "zzzzzzzzz!";
 }
 
@@ -21,7 +21,8 @@ function click(){
         document.getElementById("imgTama").src = "img/ex01/Nervoso.png";
         document.getElementById("fala").innerHTML= "Não me faça perder o meu tempo!";
     }else{
-        document.getElementById("imgTama").src = "img/ex01/Alegre.png";
+        document.getElementById("imgTama").src = "img/ex01/alegre.png";
         document.getElementById("fala").innerHTML= `${nome}, seja bem-vindo!`;
     }
 }
+
