@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisar Texto</title>
+</head>
+<body>
+    <h2>1) Texto informado pelo usuário na página anterior</h2>
+    <div id="colocaTexto"></div>
+    <h2>2) Você gostaria de analisar a informação disponibilizada pelo usuário anterior?</h2>
+    <select name="" id="s/n">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <p>OBS: Se você responder "não" na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
+    <form>
+        <input type="text" name="" id="novoTxt" style="width: 25%;">
+        <br>
+        <input type="button" value="Analisar" id="btnAnalisa">
+    </form>
+    <p id="qtdTexto">3) Quantidade de palavras no texto: </p>
+    <form>
+        <label>4) Palavras iniciadas com a letra M:</label>
+        <input type="text" id="palavraM">
+    </form>
+    <form>
+        <label>5) Primeira palavra do texto:</label>
+        <input type="text" id="priPalavra">
+    </form>
+    <form>
+        <label>6) Segunda palavra do texto</label>
+        <input type="text" id="segPalavra">
+    </form>
+    <form>
+        <label>7) Última palavra do texto</label>
+        <input type="text" id="ultPalavra">
+        <input type="button" value="Abrir a página do papai noel" id="btnNatal">
+    </form>
+    <script src="js/script2.js"></script>
+</body>
+</html>

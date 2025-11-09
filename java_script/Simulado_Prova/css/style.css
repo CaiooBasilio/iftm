@@ -1,0 +1,12 @@
+#btn{
+    padding: 22px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    background-color: green;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: red;
+}
