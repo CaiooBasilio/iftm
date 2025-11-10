@@ -1,0 +1,47 @@
+<!-- Lista de animais cadastrados -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Animais</title>
+</head>
+<body>
+    <h1>Animais</h1>
+    <!-- Formulário para cadastrar animal -->
+    <form action="/salvarAnimal" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="especie">Espécie:</label>
+        <input type="text" id="especie" name="especie" required><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+    <!-- Tabela de animais -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Lista de animais vinda do controller -->
+            <th:block th:each="animal : ${animais}">
+                <tr>
+                    <td th:text="${animal.id}"></td>
+                    <td th:text="${animal.nome}"></td>
+                    <td th:text="${animal.especie}"></td>
+                    <td>
+                        <a th:href="@{'/deletarAnimal?id=' + ${animal.id}}">Deletar</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <!-- Link para lista de usuários -->
+    <a href="/usuarios">Ver lista de usuários</a>
+</body>
+</html>
