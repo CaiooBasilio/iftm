@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Document</title>
+</head>
+<body class="cadastro">
+    <div class="caixa">
+        <img src="img/DOOM_CARD.webp" alt="Imagem do jogo DOOM">
+        <form>
+            <input type="text" id="nome" placeholder="USUARIO">>
+            <input type="text" id="senha" placeholder="SENHA">>
+            <input type="text" id="senhaCon" placeholder="CONFIRMA SENHA">>
+            <input type="button" value="Cadastar" id="btn">
+        </form>
+        <p>Já possui cadatro? Então <a href="login.html">faça o login</a></p>
+    </div>
+
+    <div class="alertaDoom" id="alertaDoom">
+    <div class="alerta">
+        <p id="msgAlerta">Mensagem aqui</p>
+        <button onclick="fechaAlerta(), alert();">OK</button>
+    </div>
+
+    <script src="js/cadastro.js" type="module"></script>
+</body>
+</html>

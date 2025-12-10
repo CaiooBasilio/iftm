@@ -1,0 +1,116 @@
+@font-face{
+    font-family: 'AmazDooMLeft';
+    src: url('../fonts/amazdoomleft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: multiply;
+    background-size: cover
+}
+.login{
+    background-image: url('../img/doomGuyBck.webp'),
+    linear-gradient(to top, black, rgb(27, 0, 0, 0.2)); 
+}
+.cadastro{
+    background-image: url('../img/doomDKbck.webp'),
+    linear-gradient(to top, black, rgb(27, 0, 0, 0.2)); 
+
+}
+.caixa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 5px;
+}
+input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, rgb(165, 0, 0), rgb(100, 0, 0)),/*aqui eu estou fazendo um degrade do topo para baixo*/
+    url("textures/tex01.jpg"),
+    url("textures/tex02.jpg"),
+    url("textures/tex03.jpg");
+    box-shadow: inset 0 0 15px #000;/*O inset vai servir para fazer a sombra interna*/
+    border: 3px solid #4d0000;
+    outline: none;
+}
+input[type="text"]{
+    text-align: center;
+    background-blend-mode: darken, multiply, color-burn;
+}
+p{
+    margin-top: 15px;
+    color: rgb(124, 0, 0);
+    font-family: "Jacquard 24", system-ui;
+}
+a{
+    color: rgb(124, 0, 0);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(192, 0, 0);
+}
+input[type="button"]{
+    color: black;
+    box-shadow: 0 0 10px red;
+    color: rgb(27, 0, 0);
+}
+input[type="button"]:hover{
+    cursor: pointer;
+}
+
+/*Fazendo um alert personalizado para ficar mais bonito kkk*/
+.alertaDoom {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.alerta {
+    background: linear-gradient(to bottom, rgb(66, 0, 0), rgb(32, 0, 0));
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid red;
+    box-shadow: 0 0 20px red;
+    font-family: 'AmazDooMLeft';
+}
+.alerta p {
+    color: #ff4444;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.alerta button {
+    background: black;
+    color: red;
+    border: 3px solid red;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'AmazDooMLeft';
+    font-size: 18px;
+}
+.alerta button:hover {
+    background: red;
+    color: black;
+    box-shadow: 0 0 15px red;
+}

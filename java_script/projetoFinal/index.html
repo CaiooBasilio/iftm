@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <form>
+            <select name="" id="niveis">
+                <option>Selecione</option>
+                <option value="fac">FACIL</option>
+                <option value="med">MEDIO</option>
+                <option value="dif">DIFICIL</option>
+            </select>
+            <input type="button" value="INICIAR" id="jogar">
+        </form>
+        <p>
+            <span id="min"></span>:<span id="seg"></span>
+        </p>
+    </header>
+    <div id="tabuleiro"></div>
+
+    <div class="alertaDoom" id="alertaDoom">
+        <div class="alerta">
+        <p id="msgAlerta">Mensagem aqui</p>
+        <button onclick="fechaAlerta()">OK</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
