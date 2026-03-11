@@ -1,0 +1,5 @@
+[
+  {nome:"Batman Cavaleiro das Trevas", imdb: 9.1, genero: "Heroi"},
+  {nome:"O Iluminado", imdb: 8.4, genero:"Terror"},
+  {nome:"Gente Grande 2", imdb: 5.4, genero:"Comedia"}
+]
