@@ -1,0 +1,31 @@
+export function cadastro(key, value){//exportar essa função la pro script
+    
+    let chave = localStorage.getItem(key);
+
+    if(chave==null){//verificando se possui mais usuarios
+        let vetUser= [value]//criando um novo vetor para armazenar o texto que for digitado pelo usuario
+
+        localStorage.setItem(key, JSON.stringify(vetUser));//colocando o JSON para deixar o vetor como uma string
+    }else{//se tiver ao menos um usuario cadastrado
+        let vetUser = JSON.parse(chave);
+        vetUser.push(value);
+        localStorage.setItem(key, JSON.stringify(vetUser));
+    }
+}
+
+export function confirmaLogin(key, value){
+    
+    let user = localStorage.getItem(key)
+
+    // if(user==null){
+    //     alert("Não a nenhum usuario existente")
+    // }else{
+        let verificacao = JSON.parse(user);
+        for(let i=0; i<verificacao.length; i++){
+            if(verificacao[i].usr==value.usr && verificacao[i].pwd==value.pwd){
+                return true;
+            }
+        }
+        return false;
+    //}
+}
