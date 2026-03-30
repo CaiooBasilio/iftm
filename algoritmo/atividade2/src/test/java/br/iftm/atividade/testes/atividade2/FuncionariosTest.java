@@ -86,10 +86,10 @@ public class FuncionariosTest {
         double valorHora = 100.00;
 
         Funcionario f = new Funcionario(nome);
-        f.setValorHora(valorHora);
+        f.setHorasTrabalhadas(horasTrabalhadas);
         String menssagemEsperada = "O número de horas trabalhadas esperadas é de no minimo 5 horas e no maximo 40 horas";
         IllegalArgumentException erro = assertThrows(IllegalArgumentException.class, () -> {
-            f.setValorHora(valorHora);
+            f.setHorasTrabalhadas(horasTrabalhadas);
         });
         String mensagemRecebida = erro.getMessage();
 
@@ -110,7 +110,7 @@ public class FuncionariosTest {
         assertEquals(valorEsperadoParaOResultado, f.calcularPagamento);
     }
 
-    
+
     // teste de valor das horas
     @Test
     public void testarModificarValorPorHoraAcimaLimiteSuperiorGeraErro(){
@@ -136,10 +136,10 @@ public class FuncionariosTest {
         double valorHora = 14.00;
 
         Funcionario f = new Funcionario(nome);
-        f.setHorasTrabalhadas(horasTrabalhadas);
+        f.setValorHora(valorHora);
         String menssagemEsperada = "O valor recebido por hora não pode ser abaixo de R$15,28 e acima de R$1000,00";
         IllegalArgumentException erro = assertThrows(IllegalArgumentException.class, () -> {
-            f.setHorasTrabalhadas(horasTrabalhadas);
+            f.setValorHora(valorHora);
         });
         String mensagemRecebida = erro.getMessage();
 
