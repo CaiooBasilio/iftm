@@ -14,14 +14,13 @@ public class FuncionariosTercerizadosTest {
         double valorHora = 15.28;
         double despesasAdicionais = 1500.00;
 
-        FuncionarioTercerizados ft = new FuncionariosTercerizados(nome);
-        ft.setHorasTrabalhadas = horasTrabalhadas;
-        ft.setValorHora = valorHora;
-        ft.setDespesasAdicionais = despesasAdicionais;
+        FuncionariosTercerizados ft = new FuncionariosTercerizados(nome);
+        ft.setHorasTrabalhadas(horasTrabalhadas);
+        ft.setValorHoras(valorHora);
         
         String mensagemEsperada = "O valor das despesas tem que ser abaxio de R$1000,00";
         IllegalArgumentException erro = assertThrows(IllegalArgumentException.class, () -> {
-            ft.setDespesasAdicionais();
+            ft.setDespesasAdicionais(despesasAdicionais);
         });
         String mensagemRecebida = erro.getMessage();
 
@@ -35,12 +34,12 @@ public class FuncionariosTercerizadosTest {
         double valorHora = 120;
         double despesasAdicionais = 1000.00;
 
-        FuncionarioTercerizados ft = new FuncionariosTercerizados(nome);
-        ft.setHorasTrabalhadas = horasTrabalhadas;
-        ft.setValorHora = valorHora;
-        ft.setDespesasAdicionais = despesasAdicionais;
+        FuncionariosTercerizados ft = new FuncionariosTercerizados(nome);
+        ft.setHorasTrabalhadas(horasTrabalhadas);
+        ft.setValorHoras(valorHora);
+        ft.setDespesasAdicionais(despesasAdicionais);
 
-        String mensagemEsperada = "O valor do salario ultrapassou os R$10.000,00";
+        String mensagemEsperada = "O valor do salario esta à cima do salario maximo de R$10.000,00";
         IllegalArgumentException erro = assertThrows(IllegalArgumentException.class, () -> {
             ft.calcularPagamento();
         });
@@ -53,14 +52,14 @@ public class FuncionariosTercerizadosTest {
     public void testarModificarDespesaGeraPagementoValido(){
         String nome = "Caio";
         int horasTrabalhadas = 20;
-        double valorHora = 120;
+        double valorHora = 110;
         double despesasAdicionais = 1000.00;
 
-        FuncionarioTercerizados ft = new FuncionariosTercerizados(nome);
-        ft.setHorasTrabalhadas = horasTrabalhadas;
-        ft.setValorHora = valorHora;
-        ft.setDespesasAdicionais = despesasAdicionais;
-        double resultadoEsperado = 8500.00;
+        FuncionariosTercerizados ft = new FuncionariosTercerizados(nome);
+        ft.setHorasTrabalhadas(horasTrabalhadas);
+        ft.setValorHoras(valorHora);
+        ft.setDespesasAdicionais(despesasAdicionais);
+        double resultadoEsperado = 9800.00;
 
         assertEquals(resultadoEsperado, ft.calcularPagamento());
 
