@@ -101,6 +101,9 @@ public class FuncionarioServiceTest {
 
         when(repositorio.findById(idValido)).thenReturn(Optional.of(funcionario));
 
+        when(repositorio.save(Mockito.any())).thenReturn(funcionario);
+
+
         Funcionario funcionarioObitido= service.concederFerias(idValido);
 
         assertEquals(funcionario.getId(), funcionarioObitido.getId());
