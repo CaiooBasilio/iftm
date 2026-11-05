@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="64x64">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <title>GALEITURA</title>
+</head>
+<body>
+<main>
+
+    <section id="tela-formulario" class="tela">
+        <div class="cartao">
+            <header class="cabecalho">
+                <img class="escudo" src="img/escudo_galo.webp" alt="Escudo do Clube Atlético Mineiro" width="96" height="96">
+                <h1>GALEITURA</h1>
+                <p class="subtitulo">Encontre um livro informando o autor, o título ou o ISBN.</p>
+                <button type="button" class="ajuda" id="btn-ajuda" aria-haspopup="dialog">? Ajuda</button>
+            </header>
+
+            <p class="dica destaque" id="dica-uso"><strong>Como usar:</strong> preencha um ou mais campos. Maiúsculas e minúsculas não fazem diferença.</p>
+
+            <form id="form-busca" novalidate>
+                <div class="campo">
+                    <div class="rotulo">
+                        <label for="input-autor">Autor</label>
+                        <span class="exemplo">Ex.: Machado de Assis</span>
+                    </div>
+                    <input type="text" id="input-autor" autocomplete="off" aria-describedby="erro-autor">
+                    <p class="msg-erro" id="erro-autor" hidden></p>
+                </div>
+
+                <div class="campo">
+                    <div class="rotulo">
+                        <label for="input-titulo">Título</label>
+                        <span class="exemplo">Ex.: Dom Casmurro</span>
+                    </div>
+                    <input type="text" id="input-titulo" autocomplete="off" aria-describedby="erro-titulo">
+                    <p class="msg-erro" id="erro-titulo" hidden></p>
+                </div>
+
+                <div class="campo">
+                    <div class="rotulo">
+                        <label for="input-isbn">ISBN</label>
+                        <span class="exemplo">Ex.: 978-85-0000-001-1</span>
+                        <span class="info" tabindex="0" aria-describedby="dica-isbn">?
+                            <span class="tooltip" id="dica-isbn" role="tooltip">
+                                <strong>ISBN</strong> é o código internacional que identifica cada livro
+                                (10 ou 13 números).<br>
+                                <strong>Onde achar:</strong> na contracapa, perto do código de barras,
+                                ou na página de créditos (ficha catalográfica), no início do livro.
+                            </span>
+                        </span>
+                    </div>
+                    <input type="text" id="input-isbn" autocomplete="off" aria-describedby="erro-isbn">
+                    <p class="msg-erro" id="erro-isbn" hidden></p>
+                </div>
+
+                <div class="acoes">
+                    <button type="button" class="secundario" id="btn-limpar">Limpar</button>
+                    <button type="submit" class="primario">Pesquisar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="tela-buscando" class="tela" hidden>
+        <div class="cartao" role="status" aria-live="polite">
+            <img class="escudo escudo-busca" src="img/escudo_galo.webp" alt="" width="64" height="64">
+            <h2 tabindex="-1">Buscando…</h2>
+            <p id="resumo-busca"></p>
+            <div class="barra"><div class="barra-preenchimento"></div></div>
+            <div class="acoes">
+                <button type="button" class="secundario" id="btn-cancelar">Cancelar busca</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="tela-encontrado" class="tela" hidden>
+        <div class="cartao sucesso">
+            <h2 tabindex="-1" id="titulo-resultado">Livro encontrado</h2>
+            <div id="lista-resultados"></div>
+            <div class="acoes">
+                <button type="button" class="secundario" data-ir="formulario">Alterar busca</button>
+                <button type="button" class="primario" data-ir="nova">Nova busca</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="tela-nao-encontrado" class="tela" hidden>
+        <div class="cartao aviso-cartao">
+            <h2 tabindex="-1">Nenhum livro encontrado</h2>
+            <p>Não encontramos livros com os dados informados. Verifique a grafia ou tente buscar por outro campo.</p>
+            <div class="acoes">
+                <button type="button" class="secundario" data-ir="formulario">Alterar busca</button>
+                <button type="button" class="primario" data-ir="nova">Nova busca</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="tela-cancelada" class="tela" hidden>
+        <div class="cartao">
+            <h2 tabindex="-1">Busca cancelada</h2>
+            <p>A busca foi interrompida. Os dados que você preencheu foram mantidos.</p>
+            <div class="acoes">
+                <button type="button" class="secundario" data-ir="nova">Nova busca</button>
+                <button type="button" class="primario" data-ir="formulario">Voltar ao formulário</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<dialog id="popup-erro" aria-labelledby="popup-erro-titulo">
+    <h2 id="popup-erro-titulo">Atenção</h2>
+    <p>Preencha ao menos um campo (autor, título ou ISBN) antes de pesquisar o livro.</p>
+    <form method="dialog">
+        <div class="acoes">
+            <button class="primario" autofocus>Entendi</button>
+        </div>
+    </form>
+</dialog>
+
+<dialog id="popup-limpar" aria-labelledby="popup-limpar-titulo">
+    <h2 id="popup-limpar-titulo">Limpar o formulário?</h2>
+    <p>Tudo o que você digitou será apagado. Essa ação não pode ser desfeita.</p>
+    <form method="dialog">
+        <div class="acoes">
+            <button value="cancelar" class="secundario" autofocus>Cancelar</button>
+            <button value="confirmar" class="primario">Sim, limpar</button>
+        </div>
+    </form>
+</dialog>
+
+<dialog id="popup-ajuda" aria-labelledby="popup-ajuda-titulo">
+    <h2 id="popup-ajuda-titulo">Como pesquisar um livro</h2>
+    <ol>
+        <li>Digite o que você sabe sobre o livro em um ou mais campos:
+            <ul>
+                <li><strong>Autor</strong>, por exemplo: Machado de Assis</li>
+                <li><strong>Título</strong>, por exemplo: Dom Casmurro</li>
+                <li><strong>ISBN</strong>, por exemplo: 978-85-0000-001-1</li>
+            </ul>
+        </li>
+        <li>Clique em <strong>Pesquisar</strong> (ou aperte Enter). Não precisa escrever o nome completo.</li>
+        <li>Aguarde a busca. Se quiser parar, clique em <strong>Cancelar busca</strong>.</li>
+        <li>Veja o resultado: os livros encontrados ou o aviso de que nada foi encontrado.</li>
+    </ol>
+    <p class="dica">Para recomeçar, use o botão <strong>Limpar</strong>.</p>
+    <form method="dialog">
+        <div class="acoes">
+            <button class="primario" autofocus>Fechar</button>
+        </div>
+    </form>
+</dialog>
+</body>
+</html>
